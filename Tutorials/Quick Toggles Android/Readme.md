@@ -35,9 +35,10 @@ So my task for Living Lights ON would be like this:
 
 - Action 1: AutoNotification Tiles: Tile 2, Command: Toggle=:=living, Icon: Icon choosen from the iconpack, State: Active, Label; Living Lights
 - Action 2: HTTP Post: http://yourhost:8123/api/services/light/turn_on?api_password=xxxxx
-inside DATA / File: {"entity_id":"your id of your device"}
-content type: application/json
+ - inside DATA / File: {"entity_id":"your id of your device"}
+ - content type: application/json
 - Action 3: Set variable: %Livinglights to On
+
 For the Living Lights OFF you do the same, but in action 1, you set as state Inactive, and in action two, you use light/turn_off, and action 3 would be Set variable %Livinglights to Off
 
 So those 2 tasks can put your lights either on or off...
@@ -45,22 +46,25 @@ So those 2 tasks can put your lights either on or off...
 So let's create now a toggle task. I call it for example: 'Toggle Living Lights'
 To do so, you need to create 5 actions. So the task will be like this:
 
-Action 1: If %Livinglights ~ On
-Action 2: Perform task: Living Lights OFF
-Action 3: Else if %Livinglights ~ Off
-Action 4: Perform task: Living Lights ON
-Action 5: End If
+- Action 1: If %Livinglights ~ On
+- Action 2: Perform task: Living Lights OFF
+- Action 3: Else if %Livinglights ~ Off
+- Action 4: Perform task: Living Lights ON
+- Action 5: End If
+
 So now you have created your toggle task for your light.
 
 Let's create another toggle to control other toggles as well, I call it eg: Toggle control
 Inside that task, it contain the following actions:
 
-Action 1: Perform task: Toggle Living Lights if %ancomm ~ living (this is the same on the right side of the =:= of the command earlier)
-Action 2: if you have more toggles you can add here....
+- Action 1: Perform task: Toggle Living Lights if %ancomm ~ living (this is the same on the right side of the =:= of the command earlier)
+- Action 2: if you have more toggles you can add here....
+
 Now only 1 thing to do is create a profile to link the toggle task to it. That is by using AutoNotification
 
-Profile > Event > AutoNotification
-As message you type: Toggle
+- Profile > Event > AutoNotification
+- As message you type: Toggle
+
 Link now your task Toggle control to it...
 
 Summary: For each thing I created 2 task (because if I want I can use those task later on, in other tasks as well).
