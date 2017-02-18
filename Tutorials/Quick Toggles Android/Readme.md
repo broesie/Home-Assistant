@@ -31,7 +31,7 @@ I prefer to create two task (because I can use those tasks in other tasks as wel
 Example: Control Living Lights, so I create a task 'Living Lights ON' and 'Living Lights OFF'
 Also for example I use the 2nd AutoNotifcation Toggle.
 
-So my task for Living Lights ON would be like this:
+#### So my task for Living Lights ON would be like this:
 
 - Action 1: AutoNotification Tiles: 
  - Tile 2
@@ -48,7 +48,7 @@ For the Living Lights OFF you do the same, but in action 1, you set as state Ina
 
 So those 2 tasks can put your lights either on or off...
 
-So let's create now a toggle task. I call it for example: 'Toggle Living Lights'
+#### So let's create now a toggle task. I call it for example: 'Toggle Living Lights'
 To do so, you need to create 5 actions. So the task will be like this:
 
 - Action 1: If %Livinglights ~ On
@@ -59,7 +59,7 @@ To do so, you need to create 5 actions. So the task will be like this:
 
 So now you have created your toggle task for your light.
 
-Let's create another toggle to control other toggles as well, I call it eg: Toggle control
+#### Let's create another toggle to control other toggles as well, I call it eg: Toggle control
 Inside that task, it contain the following actions:
 
 - Action 1: Perform task: Toggle Living Lights if %ancomm ~ living (this is the same on the right side of the =:= of the command earlier)
