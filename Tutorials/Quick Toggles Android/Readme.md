@@ -33,7 +33,12 @@ Also for example I use the 2nd AutoNotifcation Toggle.
 
 So my task for Living Lights ON would be like this:
 
-- Action 1: AutoNotification Tiles: Tile 2, Command: Toggle=:=living, Icon: Icon choosen from the iconpack, State: Active, Label; Living Lights
+- Action 1: AutoNotification Tiles: 
+ - Tile 2
+ - Command: Toggle=:=living
+ - Icon: Icon choosen from the iconpack
+ - State: Active
+ - Label: Living Lights
 - Action 2: HTTP Post: http://yourhost:8123/api/services/light/turn_on?api_password=xxxxx
  - inside DATA / File: {"entity_id":"your id of your device"}
  - content type: application/json
