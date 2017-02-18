@@ -9,13 +9,16 @@ For people who knows me, they know I'm a big fan of the Autoapps. (you can see t
 I prefer to use the autoapps, because that bundle can do way more things, that you possible can think.
 Autoapps contains AutoNotification, AutoVoice, AutoContacts, AutoRemote, AutoArduino, AutoShare, and way more...
 In my case I use AutoNotification to control my Quick Toggles...
-It can be used without root. Also my phone is running Android Nougat 7.0 (Nexus 6P)
+
+### Plugins:
 AutoNotification can be found here: https://play.google.com/store/apps/details?id=com.joaomgcd.autonotification28
 I recommend to buy the unlocked version, or to get a subscription to AutoApps (full pack, all unlocked + betas + alphas)
 
 Another way is using Custom Quick Settings. That can be also used for lower versions of android.
 I dont prefer this method, because it has way less possibilities...
 Custom Quick Settings can be found here; https://play.google.com/store/apps/details?id=com.quinny898.app.customquicksettings26
+
+## Explanation:
 
 I will explain the method of AutoNotification:
 First create a toggle on your quick settings, you can create 20 different toggles if you want...
