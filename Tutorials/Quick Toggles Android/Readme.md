@@ -24,7 +24,7 @@ I will explain the method of AutoNotification:
 First create a toggle on your quick settings, you can create 20 different toggles if you want...
 
 First you need to understand how to use Tasker to control your devices on HASS by using HTTP post and JSON.
-You can find info on this post: https://community.home-assistant.io/t/create-your-own-personal-assistent-with-tasker-in-multi-language-google-now-integration/3147
+How to setup: https://github.com/broesie/Home-Asistant-Tasker-Voice/blob/master/README.md
 
 What I did to create toggles like this:
 I prefer to create two task (because I can use those tasks in other tasks as well).
