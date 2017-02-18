@@ -1,4 +1,8 @@
-# Requirements: Tasker knowledge + AutoNotifcation or Custom Quick Settings...
+# Quick Toggles on Android
+
+## Requirements: 
+- Tasker knowledge 
+- AutoNotifcation or Custom Quick Settings...
 
 First of all, you can do it by using 2 different plugins.
 For people who knows me, they know I'm a big fan of the Autoapps. (you can see that in the tutorials I made on youtube, (made more then 100 tutorials for tasker)
