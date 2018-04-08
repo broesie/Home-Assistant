@@ -2,53 +2,29 @@
 
 ## Requirements: 
 - Tasker knowledge 
-- AutoNotifcation or Custom Quick Settings...
-
-First of all, you can do it by using 2 different plugins.
-For people who knows me, they know I'm a big fan of the Autoapps. (you can see that in the tutorials I made on youtube, (made more then 100 tutorials for tasker)
-I prefer to use the autoapps, because that bundle can do way more things, that you possible can think.
-Autoapps contains AutoNotification, AutoVoice, AutoContacts, AutoRemote, AutoArduino, AutoShare, and way more...
-In my case I use AutoNotification to control my Quick Toggles...
+- AutoNotifcation
 
 ### Plugins:
 AutoNotification can be found here: https://play.google.com/store/apps/details?id=com.joaomgcd.autonotification28
 I recommend to buy the unlocked version, or to get a subscription to AutoApps (full pack, all unlocked + betas + alphas)
 
-Another way is using Custom Quick Settings. That can be also used for lower versions of android.
-I dont prefer this method, because it has way less possibilities...
-Custom Quick Settings can be found here; https://play.google.com/store/apps/details?id=com.quinny898.app.customquicksettings26
-
 ## Explanation:
 
-I will explain the method of AutoNotification:
 First create a toggle on your quick settings, you can create 20 different toggles if you want...
 
 First you need to understand how to use Tasker to control your devices on HASS by using HTTP post and JSON.
-How to setup: https://github.com/broesie/Home-Asistant-Tasker-Voice/blob/master/README.md
 
 What I did to create toggles like this:
 I prefer to create two task (because I can use those tasks in other tasks as well).
-Example: Control Living Lights, so I create a task 'Living Lights ON' and 'Living Lights OFF'
-Also for example I use the 2nd AutoNotifcation Toggle.
+Example: Control Living Lights, so I create a task **HA - Living Top On** and **Living Top Off**
 
-#### So my task for Living Lights ON would be like this:
+#### Step 1: Checking your global variables
+Be sure before you start, that you have setup your tasker correctly, by creating global variables. This is explained here: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Setting_Global_Variables.md
 
-- Action 1: AutoNotification Tiles: 
- - Tile 2
- - Command: Toggle=:=living
- - Icon: Icon choosen from the iconpack
- - State: Active
- - Label: Living Lights
-- Action 2: HTTP Post: http://yourhost:8123/api/services/light/turn_on?api_password=xxxxx
- - inside DATA / File: {"entity_id":"your id of your device"}
- - content type: application/json
-- Action 3: Set variable: %Livinglights to On
+#### Step 2: Check your tasks to control your devices
+In previous tutorials, was explained how to create seperate tasks to control your devices in Tasker. Be sure that you have created such tasks. It is explained here: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Control_Hass_Devices.md
 
-For the Living Lights OFF you do the same, but in action 1, you set as state Inactive, and in action two, you use light/turn_off, and action 3 would be Set variable %Livinglights to Off
-
-So those 2 tasks can put your lights either on or off...
-
-#### So let's create now a toggle task. I call it for example: 'Toggle Living Lights'
+#### Step 3: Create a toggle
 To do so, you need to create 5 actions. So the task will be like this:
 
 - Action 1: If %Livinglights ~ On
