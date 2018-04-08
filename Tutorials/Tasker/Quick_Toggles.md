@@ -8,16 +8,6 @@
 AutoNotification can be found here: https://play.google.com/store/apps/details?id=com.joaomgcd.autonotification28
 I recommend to buy the unlocked version, or to get a subscription to AutoApps (full pack, all unlocked + betas + alphas)
 
-### Explanation:
-
-First create a toggle on your quick settings, you can create 20 different toggles if you want...
-
-First you need to understand how to use Tasker to control your devices on HASS by using HTTP post and JSON.
-
-What I did to create toggles like this:
-I prefer to create two task (because I can use those tasks in other tasks as well).
-Example: Control Living Lights, so I create a task **HA - Living Top On** and **Living Top Off**
-
 ### Step 1: Checking your global variables
 Be sure before you start, that you have setup your tasker correctly, by creating global variables. This is explained here: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Setting_Global_Variables.md
 
