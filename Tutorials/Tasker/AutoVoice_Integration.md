@@ -10,11 +10,15 @@ All this can be also triggered by Google Now.
 
 ## Setup Tasker:
 
-### Step 1: Create your configuration task
+### Step 1: Check your global variables
 
-See the file configuration, how to setup the global variables.
+See the file configuration, how to setup the global variables. This is explained here: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Configuration.md
 
-### Step 2: Configure your autovoice plugin:
+### Step 2: Check your Task to control your devices
+In previous tutorials, was explained how to create seperate tasks to control your devices in Tasker.
+Be sure that you have created such tasks. It is explained here: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Control_Hass_Devices.md
+
+### Step 3: Configure your autovoice plugin:
 
 - **Open de app: AutoVoice**
 - **Activate Google Now integration**, if you want integration with Google Now
@@ -22,7 +26,7 @@ See the file configuration, how to setup the global variables.
 
 **Don't forget to enable in your android settings, the accessibility for Autovoice**
 
-### Step 3: Create your profile and task
+### Step 4: Create your profile and task
 
 #### Example 1: task to turn off/turn on task with if-else statements inside the task
 
@@ -32,7 +36,7 @@ See the file configuration, how to setup the global variables.
   - Choose **Event > Plugin > Autovoice Recognize**
   - Choose **Advanced**
   - **Checkmark Regex**
-  - As **command filter** use: **(?< task >.+) my (?< device >.+)** (Without any spaces between the < and > !)
+  - As **command filter** use: **turn (?< state >.+) my (?< device >.+)** (Without any spaces between the < and > !)
 
 ##### Your task:
 
@@ -40,23 +44,15 @@ Work with if-else function
 
 I prefer to use just the If statement instead of the if-else statement, because I can collapse my code...
 
-- **If %task ~ turn on AND %device ~ living lights** (turn on living lights)
-- **Variable set: %service to light/turn_on**
-- **HTTP Post:**
-  - **Service port: %HASS_SERVICE%service%HASS_PSW**
-  - **In data / file: {"entity_id":"%HASS_TOPLIGHT","brightness":"255"}**
-  - **content/type: application/JSON**
+#### Example 1: Turn Living Top Lights On or Off
+
+- **If %state ~R on AND %device ~R living lights** (turn on living lights), use match regex!
+  - **Perform Task: HA - LivingTop On**
 - **End if**
 
-- **If %task ~ turn off AND %device ~ living lights (turn off living lights)**
-- **Variable set: %service** to **light/turn_off**
-- **HTTP Post:**
-  - **Service port: %HASS_SERVICE%service%HASS_PSW**
-  - **In data / file: {"entity_id":"%HASS_TOPLIGHT"}**
-  - **content/type: application/JSON**
+- **If %state ~R off AND %device ~R living lights** (turn off living lights), use match regex!
+  - **Perform Task: HA - LivingTop Off**
 - **End if**
-
-...
 
 #### Example 2: Dim lights task
 
@@ -70,12 +66,12 @@ I prefer to use just the If statement instead of the if-else statement, because 
 
 ##### Your task:
 
-- **If %device ~ living lights **
-- **Variable set: %service** to **light/turn_on**
-- **HTTP Post:**
- - S**ervice port: %HASS_SERVICE%service%HASS_PSW**
- - **In data / file: {"entity_id":"%HASS_TOPLIGHT","brightness":"%percentage"}**
- - **content/type: application/JSON**
+- **If %device ~R living lights ** (use match regex!)
+  - **Variable set: %service** to **light/turn_on**
+  - **HTTP Post:**
+    - Service port: **%HASS_SERVICE%service%HASS_PSW**
+    - In data / file: {"entity_id":"%HASS_TOPLIGHT","brightness":"%percentage"}
+    - content/type: application/JSON
 - **End if**
 
 #### Other Commands
