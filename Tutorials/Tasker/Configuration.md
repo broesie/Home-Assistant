@@ -1,13 +1,13 @@
-Home-Asistant: Configurate Tasker
+# Home-Asistant: Configurate Tasker
+The reason why you have to create a configuration file, is because you can work with global variables, so you have to put 1 time all your configuration, and all the tasks in the future can use those... If something change, example a entity ID, you have to change it only in 1 task.
 
-Requirements:
+## Requirements:
 An android phone
 Tasker
 Autovoice
 Setup Tasker:
 
-Step 1: Create your configuration task
-First I like to setup several thing, so I made a task, that I only need to run once... I'm putting my host, password and my devices in here. (When a device changes, then I only need to change it on 1 place, and all the other tasks will change as well).
+### Step 1: Create your configuration task
 
 So a config task would be like this in tasker:
 Variable set: %HASS_PSW To ?api_password=xxxxx
