@@ -28,7 +28,9 @@ Be sure that you have created such tasks. It is explained here: https://github.c
 
 ### Step 4: Create your profile and task
 
-#### Example 1: task to turn off/turn on task with if-else statements inside the task
+#### Example 1: task to turn off/turn on task 
+
+Let's assume you already created a task called **HA - LivingTop On** and **HA - LivingTop Off** in step 2.
 
 ##### Your profile:
 
