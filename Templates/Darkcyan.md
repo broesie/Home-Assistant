@@ -1,4 +1,4 @@
-# Template: Darkcyan
+# Template: Dark Cyan
 
 ## Installation: 
 put this code in your yaml file.
