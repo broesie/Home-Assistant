@@ -13,7 +13,7 @@ frontend:
 ### Change theme by using the frontend
 If you want to change your theme directly from the frontend, then you have to create a script, input select. Also you have to edit your groups.
 
-Script:
+**Script:**
 ``` 
 set_currenttheme:
   alias: 'Activeer current theme'
@@ -23,7 +23,7 @@ set_currenttheme:
         name: '{{states.input_select.current_theme.state}}'
 ``` 
 
-Input select:
+**Input select:**
 ``` 
   current_theme:
     name: 'currenttheme'
@@ -35,7 +35,7 @@ Input select:
     icon: 'mdi:palette'
 ``` 
 
-Groups:
+**Groups:**
 ``` 
 themes:
   name: My themes
