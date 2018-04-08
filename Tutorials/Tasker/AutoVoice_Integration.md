@@ -70,7 +70,7 @@ Also it can be shorter, if you want: just by using eg: **Perform Task: HA - Livi
 
 ##### Your task:
 
-- **Variable set: %percent** to **round(255/100**%level)** **(Enable Do Maths!)**
+- ```Variable set: %percent to round(255/100*%level)```(Enable Do Maths!)
 - **If %device ~R living lights** (use match regex!)
   - **Variable set: %service** to **light/turn_on**
   - **HTTP Post:**
