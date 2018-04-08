@@ -13,7 +13,7 @@ I will explain both methods:
 
 #### Method 1: Using HTTP GET
 - Do a **HTTP GET**: as port: **yourhost/api/states/yourentity?api_password=xxxx**
-In my case I use global variables, so I have it configure it 1 time in my programming. (see also how to configure Tasker for Home Assistant: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Configuration.md).
+In my case I use global variables, so I have it configure it 1 time in my programming. (see also how to configure Tasker for Home Assistant: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Setting_Global_Variables.md).
 So mine will be: %HASS_STATE%HASS_TOPLICHT%HASS_PSW
 - Do a variable set **%source** to **%HTTPD**
 Now you have to split the variables… If you don’t know what variables are, and what you can do, check my tutorial about variables: https://www.youtube.com/watch?v=F2IJJlUGF9E
