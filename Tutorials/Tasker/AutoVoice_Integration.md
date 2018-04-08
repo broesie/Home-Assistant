@@ -66,15 +66,16 @@ Also it can be shorter, if you want: just by using eg: **Perform Task: HA - Livi
   - **Choose Event > Plugin > Autovoice Recognize**
   - **Choose Advanced**
   - **Checkmark Regex**
-  - As **command filter** use: **dim (?< device >.+) to (?< percentage >.+)%** (Without any spaces between the < and > !)
+  - As **command filter** use: **dim (?< device >.+) to (?< level >.+)%** (Without any spaces between the < and > !)
 
 ##### Your task:
 
+- **Variable set: %percent** to **round(255/100*%level)** **(Enable Do Maths!)**
 - **If %device ~R living lights** (use match regex!)
   - **Variable set: %service** to **light/turn_on**
   - **HTTP Post:**
     - Service port: **%HASS_SERVICE%service%HASS_PSW**
-    - In data / file: **{"entity_id":"%HASS_TOPLIGHT","brightness":"%percentage"}**
+    - In data / file: **{"entity_id":"%HASS_TOPLIGHT","brightness":"%percent"}**
     - content/type: **application/JSON**
 - **End if**
 
