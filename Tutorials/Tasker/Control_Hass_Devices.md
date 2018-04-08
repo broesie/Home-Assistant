@@ -16,7 +16,7 @@ That said, let's start:
 - **Variable set: %service** to **light/turn_on**
 - **HTTP Post:** 
   - Server:Port: **%HASS_SERVICE%service%HASS_PSW**
-  - Data / File: **{"entity_id":"%HASS_TOPLICHT"}**
+  - Data / File: **{"entity_id":"%HASS_TOPLICHT"}** (see step 1: global variables)
   - Content Type: **application/json**
   - **Enable Continue Task After Error**
   - Label: **Execute Service**
