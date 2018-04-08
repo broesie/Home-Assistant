@@ -63,31 +63,13 @@ Now you can do the same for the task **HA - LivingTop Off**, but change the **st
 ### Step 6: Create a command filter to receive the commands given based on the toggles
 As you see in step 5, it will send a command, so we will create something that will react on it.
 
-- **Create a new profile**, called **Toggle - Control Commands**
+- **Create a new profile**, called **Toggle - Control Commands** (Profile > Event > AutoApps)
 - **AutoApps command**
   - **Command filter: Toggle=:=**
 - **Create a new task**, called **Toggle - Control Commands**
   - Inside that task it will be like:
     - **Perform task: Toggle - LivingTop ON/OFF** if **%aacomm ~ livingtop**
-    - **Perform task: xxx** if %aacomm ~ xxx**
+    - **Perform task: xxx** if **%aacomm ~ xxx**
     - **Etc..**
 
-Let's create another toggle to control other toggles as well, I call it eg: Toggle control
-Inside that task, it contain the following actions:
-
-- Action 1: Perform task: Toggle Living Lights if %ancomm ~ living (this is the same on the right side of the =:= of the command earlier)
-- Action 2: if you have more toggles you can add here....
-
-Now only 1 thing to do is create a profile to link the toggle task to it. That is by using AutoNotification
-
-- Profile > Event > AutoNotification
-- As message you type: Toggle
-
-Link now your task Toggle control to it...
-
-Summary: For each thing I created 2 task (because if I want I can use those task later on, in other tasks as well).
-I created 1 toggle for the device. And I created 1 main task to control the commands of all my other toggles.
-
-I also added some action, because I also can control it by KLWP if I want it, just by linking the right task to it...
-
-If you use the Custom Quick Settings plugin, I would be similar, except, the 1st action in side your ON or OFF task would be replaced by the action of Custom Quick Toggles Settings...
+If **you don't have an AutoApps subscription** and you **use only AutoNotification**, the profile trigger will be **Profile > Event > AutoNotification** and inside the task it will be **%ancomm instead of %aacomm**
