@@ -24,6 +24,7 @@ That said, let's start:
   - **Flash: Trying again** (just for letting you know, it will loop again, if timeouts)
   - **Go to action label Execute Service**
 - **End if**
+- **Variable set: %LivingTop** to **On**
 
 In this case I used a service: light/turn_on, but you can also use other services as well, like script/turn_on, etc... you can find that in the services of Home Assistant...
 So you can create for everything another task, if you want... Then you can use the action **Perform Task**, whenever you want...
