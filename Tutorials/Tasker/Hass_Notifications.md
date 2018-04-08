@@ -6,6 +6,7 @@ This tutorial will explain how you can receive notifications on your android pho
 - An android phone
 - Tasker
 - Join app (find it here: https://play.google.com/store/apps/details?id=com.joaomgcd.join)
+- (option) AutoTools (find it here: https://play.google.com/store/apps/details?id=com.joaomgcd.autotools)
 
 ### Step 1:
 - Enable Join inside your Home Assistant Configuration: (See installation: https://www.home-assistant.io/components/joaoapps_join/)
@@ -24,5 +25,13 @@ Now you have to split the variables… If you don’t know what variables are, a
 - Do a variable split: **%source** splitter **“state”**
 - Do a variable split: **%source2** splitter **"**
 
-your result will be in %source21 (you can use a flash, to check it)
-Then you can an if statement if you want…
+your result will be in **%source21** (you can use a flash, to check it)
+Then you can an if statement if you want… Eg: if **%state ~ off**, do then...
+
+#### Method 2: Using AutoTools
+- Do an **AutoTools Json Read**: **Json** is similar like the first step in method 1, **fields: state**. Also I prefer to give this action a label. Eg: **Checking device name**
+- Then I do an if statement, just for if it gives a timeout, it will do it again, till it works… (in other word, it will create a loop, if it gives a timeout). You can do it like this:
+-- If %err is set
+-- Go to label Checking device name (or what you have set in step 1) 
+
+your result will be in **%state** variable
