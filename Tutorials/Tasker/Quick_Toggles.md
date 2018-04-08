@@ -39,20 +39,50 @@ Example task of **HA - LivingTop On** will contain:
 - **End if**
 - **Variable set: %LivingTop** to **On**
 
-### Step 3: Create a toggle
+### Step 3: Create a toggle task
 You can do it with an if-else statement...
 Let's assume you already created a task called **HA - LivingTop On** and **HA - LivingTop Off** in step 2.
 So our toggle will be:
 
+- **Create a task** called **Toggle - LivingTop ON/OFF**
 - **If %LivingTop ~ On**
-  - **Perform task: Living Lights OFF**
+  - **Perform task: HA - LivingTop Off**
 - **Else if %LivingTop ~ Off**
-  - **Perform task: Living Lights ON**
+  - **Perform task: HA - LivingTop On**
 - **End If**
 
 So now you have created your toggle task for your toplight.
 
-### Let's create another toggle to control other toggles as well, I call it eg: Toggle control
+### Step 4: Put a quick toggle in your notificationbar
+Open your notificationbar, click on the gear icon, then you can change your notification icons. When you scroll down, you can add a Autonotification Toggle. Put a Autonotification toggle in your notificationbar. **Be sure, you remember which one! All the notification icons are numbered, so remember the number!!** Let's assume we add the AutoNotification 2 inside the Notificationbar.
+
+### Step 5: Edit your task to turn on and turn off your light
+Now we have to edit the task **HA - LivingTop Off** and **HA - LivingTop On**, because we will link it with the toggle of step 4.
+For example we edit the task **HA - LivingTop On**. At the end of the task, we add 1 action:
+
+- **Autonotifcation Tiles:** 
+  - **Tile 2**
+  - Icon: **choose an icon**
+  - Status icon: **choose an icon**
+  - Label: **Living Top**
+  - State: **Active**
+  - Command: **Toggle=:=livingtop**
+
+Now you can do the same for the task **HA - LivingTop Off**, but change the **state** to **Inactive**.
+
+### Step 6: Create a command filter to receive the commands given based on the toggles
+As you see in step 5, it will send a command, so we will create something that will react on it.
+
+- **Create a new profile**, called **Toggle - Control Commands**
+- **AutoApps command**
+  - **Command filter: Toggle=:=**
+- **Create a new task**, called **Toggle - Control Commands**
+  - Inside that task it will be like:
+    - **Perform task: Toggle - LivingTop ON/OFF** if **%aacomm ~ livingtop**
+    - **Perform task: xxx** if %aacomm ~ xxx**
+    - **Etc..**
+
+Let's create another toggle to control other toggles as well, I call it eg: Toggle control
 Inside that task, it contain the following actions:
 
 - Action 1: Perform task: Toggle Living Lights if %ancomm ~ living (this is the same on the right side of the =:= of the command earlier)
