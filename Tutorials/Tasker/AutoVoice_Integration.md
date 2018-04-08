@@ -1,4 +1,4 @@
-# Home-Asistant: Control it by voice by using Tasker (in any language)
+# Home-Assistant: Control it by voice by using Tasker (in any language)
 
 This is a tutorial how you can control your devices by using your voice in your own language....
 All this can be also triggered by Google Now.
