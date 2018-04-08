@@ -43,17 +43,17 @@ I prefer to use just the If statement instead of the if-else statement, because 
 - **If %task ~ turn on AND %device ~ living lights** (turn on living lights)
 - **Variable set: %service to light/turn_on**
 - **HTTP Post:**
- - **Service port: %HASS_SERVICE%service%HASS_PSW**
- - **In data / file: {"entity_id":"%HASS_TOPLIGHT","brightness":"255"}**
- - **content/type: application/JSON**
+  - **Service port: %HASS_SERVICE%service%HASS_PSW**
+  - **In data / file: {"entity_id":"%HASS_TOPLIGHT","brightness":"255"}**
+  - **content/type: application/JSON**
 - **End if**
 
 - **If %task ~ turn off AND %device ~ living lights (turn off living lights)**
 - **Variable set: %service** to **light/turn_off**
 - **HTTP Post:**
- - **Service port: %HASS_SERVICE%service%HASS_PSW**
- - **In data / file: {"entity_id":"%HASS_TOPLIGHT"}**
- - **content/type: application/JSON**
+  - **Service port: %HASS_SERVICE%service%HASS_PSW**
+  - **In data / file: {"entity_id":"%HASS_TOPLIGHT"}**
+  - **content/type: application/JSON**
 - **End if**
 
 ...
