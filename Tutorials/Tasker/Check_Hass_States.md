@@ -1,4 +1,4 @@
-# Check State of Home Assistant Devices
+# Check States of Home Assistant Devices
 This tutorial will learn you how to check states in tasker of your Home Assistant devices...
 
 ## Requirements:
@@ -6,10 +6,7 @@ This tutorial will learn you how to check states in tasker of your Home Assistan
 - Tasker
 - (option) AutoTools (find it here: https://play.google.com/store/apps/details?id=com.joaomgcd.autotools)
 
-### Step 1:
-- Enable Join inside your Home Assistant Configuration: (See installation: https://www.home-assistant.io/components/joaoapps_join/)
-
-### Step 2:
+### Description:
 The're 2 ways to retrieve information from Home Assistant to your Tasker. You can use HTTP GET or you can use the AutoTools plugin.
 Personal I prefer tot use AutoTools, because the programming is cleaner, and you don’t have to use split variables. You can realize it with only 1 action. If you don’t want to use a plugin, you still can realize is with HTTP GET…
 I will explain both methods:
