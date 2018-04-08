@@ -14,7 +14,7 @@ All this can be also triggered by Google Now.
 
 See the file configuration, how to setup the global variables. This is explained here: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Setting_Global_Variables.md
 
-### Step 2: Check your Task to control your devices
+### Step 2: Check your tasks to control your devices
 In previous tutorials, was explained how to create seperate tasks to control your devices in Tasker.
 Be sure that you have created such tasks. It is explained here: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Control_Hass_Devices.md
 
