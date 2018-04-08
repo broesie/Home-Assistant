@@ -31,7 +31,7 @@ Then you can an if statement if you want… Eg: if **%state ~ off**, do then...
 #### Method 2: Using AutoTools
 - Do an **AutoTools Json Read**: **Json** is similar like the first step in method 1, **fields: state**. Also I prefer to give this action a label. Eg: **Checking device name**
 - Then I do an if statement, just for if it gives a timeout, it will do it again, till it works… (in other word, it will create a loop, if it gives a timeout). You can do it like this:
-  1. If %err is set
-  2.  Go to label Checking device name (or what you have set in step 1) 
+  1. **If %err is set**
+  2.  **Go to label Checking device name** (or what you have set in step 1) 
 
 your result will be in **%state** variable
