@@ -8,7 +8,7 @@
 AutoNotification can be found here: https://play.google.com/store/apps/details?id=com.joaomgcd.autonotification28
 I recommend to buy the unlocked version, or to get a subscription to AutoApps (full pack, all unlocked + betas + alphas)
 
-## Explanation:
+### Explanation:
 
 First create a toggle on your quick settings, you can create 20 different toggles if you want...
 
@@ -28,9 +28,26 @@ In previous tutorials, was explained how to create seperate tasks to control you
 You can do it with an if-else statement...
 Let's assume you already created a task called **HA - LivingTop On** and **HA - LivingTop Off** in step 2.
 
-- **If %Livinglights ~ On**
+Example task of **HA - LivingTop On** it will contain:
+
+- **Variable set: %service** to **light/turn_on**
+- **HTTP Post:** 
+  - Server:Port: **%HASS_SERVICE%service%HASS_PSW** (see step 1: global variables)
+  - Data / File: **{"entity_id":"%HASS_TOPLICHT"}** (see step 1: global variables)
+  - Content Type: **application/json**
+  - **Enable Continue Task After Error**
+  - Label: **Execute Service**
+- **If %err is set** (I prefer to do a loop, if it gives a timeout...)
+  - **Flash: Trying again** (just for letting you know, it will loop again, if timeouts)
+  - **Go to action label Execute Service**
+- **End if**
+- **Variable set: %LivingTop** to **On**
+
+So our toggle will be:
+
+- **If %LivingTop ~ On**
   - **Perform task: Living Lights OFF**
-- **Else if %Livinglights ~ Off**
+- **Else if %LivingTop ~ Off**
   - **Perform task: Living Lights ON**
 - **End If**
 
