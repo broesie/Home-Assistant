@@ -20,7 +20,7 @@ That said, let's start:
   - Content Type: **application/json**
   - **Enable Continue Task After Error**
   - Label: **Execute Service**
-- **If %err** is set (I prefer to do a loop, if it gives a timeout...)
+- **If %err is set** (I prefer to do a loop, if it gives a timeout...)
   - **Flash: Trying again** (just for letting you know, it will loop again, if timeouts)
   - **Go to action label Execute Service**
 - **End if**
