@@ -1,1 +1,28 @@
 # Control your Home Assistant devices from Tasker
+In this tutorial, you will learn how to control your devices straight from Tasker.
+
+## Requirements:
+- An android phone
+- Tasker
+
+### Step 1: Check your global variables
+Be sure before you start, that you have setup your tasker correctly, by creating global variables. This is explained here: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Configuration.md
+
+### Step 2: Creating your tasks
+I prefer to create a task for every state, eg: to power on my living lights, to power off my living lights, etc... The reason is very simple, that way I can call the task in other tasks as well, just by using **Perform Task**, so I don't have to configure it again.
+That said, let's start:
+
+- Create a **new task**, give it a name, **eg: HA - LivingTop On** (example: this will put my toplights in the living on)
+- **HTTP Post:** 
+  - Server:Port: **%HASS_SERVICE%service%HASS_PSW**
+  - Data / File: **{"entity_id":"%HASS_TOPLICHT"}**
+  - Content Type: **application/json**
+  - **Enable Continue Task After Error**
+  - Label: **Execute Service**
+- **If %err** is set (I prefer to do a loop, if it gives a timeout...)
+  - **Flash: Trying again** (just for letting you know, it will loop again, if timeouts)
+  - **Go to action label Execute Service**
+- **End if**
+
+So you can create for everything another task, if you want... Then you can use the action **Perform Task**, whenever you want...
+ 
