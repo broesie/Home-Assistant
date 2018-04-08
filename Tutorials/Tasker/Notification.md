@@ -34,3 +34,13 @@ Now tasker has to do something when it receive something like that...
   - Use as trigger / context: **Event > Plugin > Join**
   - As configuration: set **textfilter: setvar**
 - **Create a new task**, give it a name, eg: **Join - Receive Vars**
+  - **Variable set: %%joincomm(1)** to **%joincomm(2)** (setting global variables in tasker)
+  - Then you can do what ever you want using if commands: eg: **Perform Task xxx** if **%joincomm(1) ~ LivingLampTop & joincomm(2) ~ On** (In perform task, you can enable the if statement) 
+  
+  In my case I have also several tasks, eg: HA - Alert Toplights On. This task will eg update my homescreen on my phone and also change my quick toggles on my phone.
+  Example of the content of this task can be:
+  - **Autonotification Tiles**, update tiles
+  - **KLWP send variable** to update my homescreen
+  - **Say: The toplights are on.**
+  - etc...
+  
