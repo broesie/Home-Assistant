@@ -1,6 +1,6 @@
 # Template: Dark Red
 ## Installation: 
-put this code in your yaml file.
+Put this code in your themes.yaml file. Check out the installation file for more info (https://github.com/broesie/Home-Assistant/blob/master/Templates/Installation.md)
 
 ``` 
 darkred:
