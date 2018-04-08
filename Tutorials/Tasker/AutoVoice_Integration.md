@@ -74,8 +74,8 @@ Also it can be shorter, if you want: just by using eg: **Perform Task: HA - Livi
   - **Variable set: %service** to **light/turn_on**
   - **HTTP Post:**
     - Service port: **%HASS_SERVICE%service%HASS_PSW**
-    - In data / file: {"entity_id":"%HASS_TOPLIGHT","brightness":"%percentage"}
-    - content/type: application/JSON
+    - In data / file: **{"entity_id":"%HASS_TOPLIGHT","brightness":"%percentage"}**
+    - content/type: **application/JSON**
 - **End if**
 
 #### Other Commands
