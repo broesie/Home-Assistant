@@ -1,11 +1,9 @@
-# Create Home Assistant notifications with Tasker
-
-This tutorial will explain how you can receive notifications on your android phone.
+# Check State of Home Assistant Devices
+This tutorial will learn you how to check states in tasker of your Home Assistant devices...
 
 ## Requirements:
 - An android phone
 - Tasker
-- Join app (find it here: https://play.google.com/store/apps/details?id=com.joaomgcd.join)
 - (option) AutoTools (find it here: https://play.google.com/store/apps/details?id=com.joaomgcd.autotools)
 
 ### Step 1:
