@@ -10,7 +10,7 @@ This tutorial will learn you how to create notifications on your phone by using 
 ### Step 1: Configure Join in Home Assistant
 - Configure your hass with Join (See: https://www.home-assistant.io/components/joaoapps_join/)
 
-### Step 2: Create automations
+### Step 2: Create automations in Home Assistant
 Now it time to create some automations, examples are like this:
 
 ``` 
@@ -26,3 +26,11 @@ Now it time to create some automations, examples are like this:
     data:
       command: setvar=:=LivingLampTop=:=On
 ```
+
+### Step 3: Let tasker react to incoming messages
+As you see in the example of the previous step, hass will send a notification to my Nexus 6P, with a command setvar=:=LivingLampTop=:=On.
+Now tasker has to do something when it receive something like that...
+- **Create a profile**, give it a name, **eg: Join - Receive Vars**
+  - Use as trigger / context: **Event > Plugin > Join**
+  - As configuration: set **textfilter: setvar**
+- **Create a new task**, give it a name, eg: **Join - Receive Vars**
