@@ -18,10 +18,10 @@ What I did to create toggles like this:
 I prefer to create two task (because I can use those tasks in other tasks as well).
 Example: Control Living Lights, so I create a task **HA - Living Top On** and **Living Top Off**
 
-#### Step 1: Checking your global variables
+### Step 1: Checking your global variables
 Be sure before you start, that you have setup your tasker correctly, by creating global variables. This is explained here: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Setting_Global_Variables.md
 
-#### Step 2: Check your tasks to control your devices
+### Step 2: Check your tasks to control your devices
 In previous tutorials, was explained how to create seperate tasks to control your devices in Tasker. Be sure that you have created such tasks. It is explained here: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Control_Hass_Devices.md
 
 Example task of **HA - LivingTop On** will contain:
@@ -39,7 +39,7 @@ Example task of **HA - LivingTop On** will contain:
 - **End if**
 - **Variable set: %LivingTop** to **On**
 
-#### Step 3: Create a toggle
+### Step 3: Create a toggle
 You can do it with an if-else statement...
 Let's assume you already created a task called **HA - LivingTop On** and **HA - LivingTop Off** in step 2.
 So our toggle will be:
@@ -52,7 +52,7 @@ So our toggle will be:
 
 So now you have created your toggle task for your toplight.
 
-#### Let's create another toggle to control other toggles as well, I call it eg: Toggle control
+### Let's create another toggle to control other toggles as well, I call it eg: Toggle control
 Inside that task, it contain the following actions:
 
 - Action 1: Perform task: Toggle Living Lights if %ancomm ~ living (this is the same on the right side of the =:= of the command earlier)
