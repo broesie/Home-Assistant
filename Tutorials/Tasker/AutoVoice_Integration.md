@@ -54,6 +54,8 @@ I prefer to use just the If statement instead of the if-else statement, because 
   - **Perform Task: HA - LivingTop Off**
 - **End if**
 
+Also it can be shorter, if you want: just by using eg: **Perform Task: HA - LivingTop Off** and checkmark the if-statement, and put there: **If %state ~R off AND %device ~R living lights**. So in that case, you only use 1 action, instead of 3...
+
 #### Example 2: Dim lights task
 
 ##### Your profile:
@@ -81,7 +83,5 @@ Above a little example to turn on or turn off things, but you can create also ot
 - **dim (?< device >.+) to (?< percentage >.+)%** (Without any spaces between the < and > !)
 - **activate (?< scene >.+) mode** (Without any spaces between the < and > !)
 - ....
-
-You only need to change data and attributes...
 
 The beauty of this, is that I can use Google now, so I can use Google AI to recognize my speech, and when I say a command by saying OK Google, it will also send it to my tasker autovoice...
