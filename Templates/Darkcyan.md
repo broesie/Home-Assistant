@@ -1,6 +1,7 @@
 # Template: Darkcyan
 
-## Installation: put this code in your yaml file.
+## Installation: 
+put this code in your yaml file.
 
 ``` 
 darkcyan:
