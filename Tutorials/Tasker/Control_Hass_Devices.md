@@ -25,5 +25,6 @@ That said, let's start:
   - **Go to action label Execute Service**
 - **End if**
 
+In this case I used a service: light/turn_on, but you can also use other services as well, like script/turn_on, etc... you can find that in the services of Home Assistant...
 So you can create for everything another task, if you want... Then you can use the action **Perform Task**, whenever you want...
  
