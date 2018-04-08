@@ -13,6 +13,7 @@ I prefer to create a task for every state, eg: to power on my living lights, to 
 That said, let's start:
 
 - Create a **new task**, give it a name, **eg: HA - LivingTop On** (example: this will put my toplights in the living on)
+- **Variable set: %service** to **light/turn_on**
 - **HTTP Post:** 
   - Server:Port: **%HASS_SERVICE%service%HASS_PSW**
   - Data / File: **{"entity_id":"%HASS_TOPLICHT"}**
