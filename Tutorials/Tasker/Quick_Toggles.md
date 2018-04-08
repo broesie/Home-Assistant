@@ -25,13 +25,14 @@ Be sure before you start, that you have setup your tasker correctly, by creating
 In previous tutorials, was explained how to create seperate tasks to control your devices in Tasker. Be sure that you have created such tasks. It is explained here: https://github.com/broesie/Home-Assistant/blob/master/Tutorials/Tasker/Control_Hass_Devices.md
 
 #### Step 3: Create a toggle
-To do so, you need to create 5 actions. So the task will be like this:
+You can do it with an if-else statement...
+Let's assume you already created a task called **HA - LivingTop On** and **HA - LivingTop Off** in step 2.
 
-- Action 1: If %Livinglights ~ On
-- Action 2: Perform task: Living Lights OFF
-- Action 3: Else if %Livinglights ~ Off
-- Action 4: Perform task: Living Lights ON
-- Action 5: End If
+- **If %Livinglights ~ On**
+  - **Perform task: Living Lights OFF**
+- **Else if %Livinglights ~ Off**
+  - **Perform task: Living Lights ON**
+- **End If**
 
 So now you have created your toggle task for your light.
 
