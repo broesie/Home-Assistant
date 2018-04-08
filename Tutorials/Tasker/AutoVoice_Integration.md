@@ -70,7 +70,7 @@ Also it can be shorter, if you want: just by using eg: **Perform Task: HA - Livi
 
 ##### Your task:
 
-- **If %device ~R living lights ** (use match regex!)
+- **If %device ~R living lights** (use match regex!)
   - **Variable set: %service** to **light/turn_on**
   - **HTTP Post:**
     - Service port: **%HASS_SERVICE%service%HASS_PSW**
