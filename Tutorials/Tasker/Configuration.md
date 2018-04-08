@@ -4,8 +4,6 @@ The reason why you have to create a configuration file, is because you can work 
 ## Requirements:
 An android phone
 Tasker
-Autovoice
-Setup Tasker:
 
 ### Step 1: Create your configuration task
 
