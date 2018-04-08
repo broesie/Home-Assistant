@@ -2,8 +2,8 @@
 The reason why you have to create a configuration file, is because you can work with global variables, so you have to put 1 time all your configuration, and all the tasks in the future can use those... If something change, example a entity ID, you have to change it only in 1 task.
 
 ## Requirements:
-An android phone
-Tasker
+- An android phone
+- Tasker
 
 ### Step 1: Create your configuration task
 
