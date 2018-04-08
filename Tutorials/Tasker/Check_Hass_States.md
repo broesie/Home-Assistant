@@ -19,6 +19,7 @@ So mine will be: %HASS_STATE%HASS_TOPLICHT%HASS_PSW
 Now you have to split the variables… If you don’t know what variables are, and what you can do, check my tutorial about variables: https://www.youtube.com/watch?v=F2IJJlUGF9E
 - Do a variable split: **%source** splitter **“state”**
 - Do a variable split: **%source2** splitter **"**
+- Do a variable set: **%state** to **%source21**
 
 your result will be in **%source21** (you can use a flash, to check it)
 Then you can an if statement if you want… Eg: if **%state ~ off**, do then...
