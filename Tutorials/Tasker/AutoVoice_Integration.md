@@ -47,11 +47,11 @@ I prefer to use just the If statement instead of the if-else statement, because 
 #### Example 1: Turn Living Top Lights On or Off
 
 - **If %state ~R on AND %device ~R living lights** (turn on living lights), use match regex!
-  - **Perform Task: HA - LivingTop On**
+  - **Perform Task: HA - LivingTop On** (See step 2)
 - **End if**
 
 - **If %state ~R off AND %device ~R living lights** (turn off living lights), use match regex!
-  - **Perform Task: HA - LivingTop Off**
+  - **Perform Task: HA - LivingTop Off** (See step 2)
 - **End if**
 
 Also it can be shorter, if you want: just by using eg: **Perform Task: HA - LivingTop Off** and checkmark the if-statement, and put there: **If %state ~R off AND %device ~R living lights**. So in that case, you only use 1 action, instead of 3...
